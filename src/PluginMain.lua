@@ -44,7 +44,7 @@ local selectionTable = {
 local dropdown = DropdownMenu.new(
 	"suffix", -- name suffix of gui object
 	"Label text", -- displayed label text
-	selectionTable -- table of selection data, optional
+	selectionTable -- table of selection data
 )
 
 
