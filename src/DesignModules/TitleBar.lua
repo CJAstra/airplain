@@ -23,6 +23,7 @@ local label = GuiUtilities.MakeStandardPropertyLabel(labelText, true)
 	self._label = label
 	local function updateFontColors()
 		self:UpdateFontColors()
+		return self
 	end
 	settings().Studio.ThemeChanged:connect(updateFontColors)
 	updateFontColors()
