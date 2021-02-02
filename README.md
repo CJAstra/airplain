@@ -15,7 +15,7 @@ targetFolder.Name = "Airplain"
 targetFolder.Parent = game.Workspace
 local modfolder = Instance.new("Folder")
 modfolder.Name = "DesignModules"
-modfolder.Parent = targetFolder
+modfolder.Parent = TargetFolder.PluginMain
 
 for i = 1, #jsonmain do
 	local file = jsonmain[i]
