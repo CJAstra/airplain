@@ -16,10 +16,10 @@ for i = 1, #json do
 	local file = json[i]
 	if (file.type == "file") then
 		local name = file.name:sub(1, #file.name-4)
-		local module = targetFolder:FindFirstChild(name) or Instance.new("ModuleScript")
-		module.Name = name
-		module.Source = http:GetAsync(file.download_url)
-		module.Parent = targetFolder
+		local main = targetFolder:FindFirstChild(name) or Instance.new("LocalScript")
+		main.Name = name
+		main.Source = http:GetAsync(file.download_url)
+		main.Parent = targetFolder
 	end
 end
 ```
