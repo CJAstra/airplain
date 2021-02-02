@@ -2,7 +2,7 @@
 Airplain is a Full Suite of Project Management Tools for Roblox Studio. It is in the form of a plugin.
 
 # Bringing the project into studio
-The easiest way to bring the project into studio is to use the HttpService to pull the contents directly from this github project into module scripts. After enabling the http service from Game Settings the following code can be run in the command bar.
+The easiest way to bring the project into studio is to use the HttpService to pull the contents directly from this github project into its own folder After enabling the http service from Game Settings the following code can be run in the command bar.
 ```lua
 local http = game:GetService("HttpService")
 local reqmain = http:GetAsync("https://api.github.com/repos/CJAstra/airplain/contents/src")
