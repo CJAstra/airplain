@@ -13,6 +13,9 @@ local jsonmod = http:JSONDecode(reqmod)
 local targetFolder = Instance.new("Folder")
 targetFolder.Name = "Airplain"
 targetFolder.Parent = game.Workspace
+local modfolder = Instance.new("Folder")
+modfolder.Name = "DesignModules"
+modfolder.Parent = targetFolder
 
 for i = 1, #jsonmain do
 	local file = jsonmain[i]
@@ -32,7 +35,7 @@ for i = 1, #jsonmod do
 		local main = targetFolder:FindFirstChild(name) or Instance.new("ModuleScript")
 		main.Name = name
 		main.Source = http:GetAsync(file.download_url)
-		main.Parent = targetFolder
+		main.Parent = modfolder
 		
 	end
 end
