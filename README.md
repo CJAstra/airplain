@@ -15,7 +15,7 @@ targetFolder.Name = "Airplain"
 targetFolder.Parent = game.Workspace
 local modfolder = Instance.new("Folder")
 modfolder.Name = "DesignModules"
-modfolder.Parent = targetFolder.PluginMain
+modfolder.Parent = targetFolder
 
 for i = 1, #jsonmain do
 	local file = jsonmain[i]
@@ -36,6 +36,7 @@ for i = 1, #jsonmod do
 		main.Name = name
 		main.Source = http:GetAsync(file.download_url)
 		main.Parent = modfolder
+		modfolder.Parent = targetFolder.PluginMain
 		
 	end
 end
